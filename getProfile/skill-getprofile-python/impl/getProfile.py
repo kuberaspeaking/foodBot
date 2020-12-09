@@ -1,32 +1,12 @@
 import random
 import json
+import requests
 
 from skill_sdk import skill, Response, tell, Card
 from skill_sdk.l10n import _
 
-INTENT_NAME = 'GET_MENU'
-#
-# PROFILE_BASE_URL = "https://kuberaspeaking.github.io/foodBot/assets/profile.json"
 
-
-
-def get_profile_url() -> str:
-    """
-    reads the menu options for the user
-
-    :return:
-    """
-    with open('static/profile.json') as f:
-        data = json.load(f)
-
-    menu = data["profile"]
-
-    print(menu["meal_choice"])
-
-    return menu
-
-
-@skill.intent_handler(INTENT_NAME)
+@skill.intent_handler("ORDER_FOOD")
 def handler() -> Response:
     """
     This handler is the first point of contact when your utterance is actually resolved!
@@ -34,15 +14,25 @@ def handler() -> Response:
 
     :return:        Response
     """
-    # We get a translated message
-    msg = _('What would you like to eat today?')
-    # We create a simple response
-    response = tell(msg)
-    response.card = Card(
-        title=_("options"),
-        action=get_profile_url(),
-        action_text=_("options->menu")
-    )
+    try:
+        # We request a random joke from icndb with time-out set to 10 seconds
+        response = requests.get('https://kuberaspeaking.github.io/foodBot/assets/profile.json', timeout=10)
+        # We parse the response json or raise exception if unsuccessful
+        response.raise_for_status()
+        data = response.json()
+        print(data)
+        # We get the menu from the response data
+        menu = data['profile']['meal_choice']
+        # We format our response to user or ask for an excuse
+        if menu:
+            msg = _('Was möchtest du essen? Vegetarisch oder Fleischgerichte?', menu=menu)
+        else:
+            msg = _('Ich verstehe nicht')
+    except requests.exceptions.RequestException as err:
+        msg = _('ERROR', err=err)
 
-    return response
+        # We create a response with either menu or error message
+    return tell(msg)
+
+
 
