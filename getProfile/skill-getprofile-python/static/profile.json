@@ -1,0 +1,22 @@
+{
+    "profile":{
+        "meal_choice":{
+            "vegetarisch":{
+                "keramikos":"Halloumi Salat",
+                "momos":"Fresh Delight",
+                "Yarok":"Makali Sandwich",
+                "My Goodness":"Over The Rainbow"
+            },
+            "Fleischgerichte":{
+                "keramikos": "Mousaka",
+                "Yarok": "Kabab Sandwich",
+                "Aiko Sushi": "Tori Teriyaki",
+                "Kuchi" : "Maki Mix Special"
+            }
+        },
+        "lieferando_profile":{
+            "username":"team23@mail.com",
+            "password":"magenta12345"
+        }
+    }
+}
