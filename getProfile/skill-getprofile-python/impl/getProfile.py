@@ -2,7 +2,7 @@ import random
 import json
 import requests
 
-from skill_sdk import skill, Response, tell, Card
+from skill_sdk import skill, Response, tell, Card, ask
 from skill_sdk.l10n import _
 
 
@@ -32,7 +32,7 @@ def handler() -> Response:
         msg = _('ERROR', err=err)
 
         # We create a response with either menu or error message
-    return tell(msg)
+    return ask(msg)
 
 
 
