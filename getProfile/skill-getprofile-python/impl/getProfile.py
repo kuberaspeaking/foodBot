@@ -20,7 +20,7 @@ def handler() -> Response:
         # We parse the response json or raise exception if unsuccessful
         response.raise_for_status()
         data = response.json()
-        print(data)
+        # print(data)
         # We get the menu from the response data
         menu = data['profile']['meal_choice']
         # We format our response to user or ask for an excuse
