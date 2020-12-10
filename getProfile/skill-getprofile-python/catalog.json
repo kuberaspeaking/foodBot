@@ -1,0 +1,18 @@
+{
+    "v1": {
+      "showsInCatalog": true,
+      "displayName": "Order Food",
+      "headline": "Magenta orders lunch for you",
+      "description": "app to order lunch with voice command",
+      "iconUrl": "https://kuberaspeaking.github.io/foodBot/assets/food.png",
+      "design": {
+        "backgroundColor": "#008FE2"
+      },
+      "examplePhrases": [
+        "essen"
+      ]
+    },
+    "fileVersion": 1
+  }
+  
+  
