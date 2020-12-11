@@ -6,10 +6,10 @@
       "description": "app to order lunch with voice command",
       "iconUrl": "https://kuberaspeaking.github.io/foodBot/assets/food.png",
       "design": {
-        "backgroundColor": "#008FE2"
+        "backgroundColor": "#c49072"
       },
       "examplePhrases": [
-        "essen"
+        "Ich möchte essen bestellen"
       ]
     },
     "fileVersion": 1
