@@ -11,23 +11,42 @@ msgstr ""
 "Language: de_DE\n"
 
 
-msgid "HELLOAPP_HELLO"
-msgstr "Hallo"
+msgid "ORDER_FOOD_MEAL_OPTIONS"
+msgstr "Was möchtest du essen? Vegetarisch oder Fleischgerichte?"
 
-msgid "HELLOAPP_JOKE"
-msgstr "Ich habe einen Witz für dich! {joke}"
+msgid "ORDER_FOOD_VEG"
+msgstr "Ich habe diese vegetarisch gerischte! {veg}"
 
-msgid "HELLOAPP_REQUEST_ERROR"
-msgstr "Ich hatte Probleme, einen Witz zu bekommen. Der Fehler ist {err}"
+msgid "ORDER_FOOD_FLIESCH"
+msgstr "Ich habe diese fleischgerichte! {fleisch}"
 
-msgid "HELLOAPP_RESPONSE_ERROR"
-msgstr "Ich hatte Probleme, einen Witz für dich zu bekommen. Es tut mir leid :("
+msgid "ORDER_FOOD_REQUEST_ERROR"
+msgstr "Entschuldigung bitte, Der Fehler ist {err}"
 
-msgid "HELLOAPP_NUMBER_SUCCESS_MESSAGE"
-msgstr "Bingo! Die Nummer ist {number}"
+msgid "ORDER_FOOD_RESPONSE_ERROR"
+msgstr "Ich konnte das Menü nicht abrufen. Es tut mir leid :("
 
-msgid "HELLOAPP_NUMBER_WRONG_MESSAGE"
-msgstr "Es tut mir leid, das war nicht meine Nummer. Vielleicht nächstes Mal?"
+msgid "ORDER_FOOD_HALLOUMI_SALAT"
+msgstr "Ich habe Halloumi salat bei Keramikos bestellt! "
 
-msgid "HELLOAPP_NO_NUMBER_MESSAGE"
-msgstr "Ich hatte Probleme dich zu verstehen. Bitte rate eine Nummer von 1 bis 10."
+msgid "ORDER_FOOD_FRESH_DELIGHT"
+msgstr "Ich habe Fresh Delight bei Momos bestellt! "
+
+msgid "ORDER_FOOD_MAKALI_SANDWICH"
+msgstr "Ich habe Makali sandwich bei Yarok bestellt! "
+
+msgid "OVER_THE_RAINBOW"
+msgstr "Ich habe Over The Rainbow bei My Goodness bestellt! "
+
+msgid "ORDER_FOOD_MOUSAKA"
+msgstr "Ich habe Mousaka bei Keramikos bestellt!"
+
+msgid "ORDER_FOOD_KEBAB_SANDWICH"
+msgstr "Ich habe kebab sandwich bei Yarok bestellt! "
+
+msgid "ORDER_FOOD_TORI_TERIYAKI"
+msgstr "Ich habe Tori Tereyaki bei Aiko Sushi bestellt! "
+
+msgid "ORDER_FOOD_MAKI_MIX_SPECIAL"
+msgstr "Ich habe Maki mix special bei Kuchi bestellt! "
+
