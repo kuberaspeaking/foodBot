@@ -14,7 +14,7 @@ def handler() -> Response:
     """
     msg = _('ORDER_FOOD_MEAL_OPTIONS')
 
-    return ask(msg)
+    return tell(msg)
 
 @skill.intent_handler("VEG")
 def handler()-> Response:
@@ -42,7 +42,7 @@ def handler()-> Response:
     except requests.exceptions.RequestException as err:
         msg = _('ORDER_FOOD_REQUEST_ERROR', err=err)
 
-    return ask(msg)
+    return tell(msg)
 
 
 @skill.intent_handler("HALLOUMI_SALAT")
@@ -112,7 +112,7 @@ def handler()-> Response:
     except requests.exceptions.RequestException as err:
         msg = _('ORDER_FOOD_REQUEST_ERROR', err=err)
 
-    return ask(msg)
+    return tell(msg)
 
 
 

@@ -7,30 +7,15 @@
 # For details see the file LICENSE in the top directory.
 #
 #
-from unittest import mock
 import unittest
-
-from impl.number import skill
+from impl.getProfile import skill
 
 
 class TestMain(unittest.TestCase):
 
-    @mock.patch('impl.number.randint', return_value=5)
-    def test_number_game_won(self, m):
-        """ Mock random number to return 5 and ensure we won the game
+    def test_order_handler(self):
+        """ A simple test case to ensure that our implementation asks 'vegetarisch oder Fleishgerichte'
         """
-        response = skill.test_intent('MINIGAMES__GUESS_NUMBER', number=[5])
-        self.assertEqual(response.text.key, 'HELLOAPP_NUMBER_SUCCESS_MESSAGE')
+        response = skill.test_intent('ORDER_FOOD')
+        self.assertEqual(response.text.key, 'ORDER_FOOD_MEAL_OPTIONS')
 
-    @mock.patch('impl.number.randint', return_value=1)
-    def test_number_game_lost(self, m):
-        """ Mock random number to return 1 and ensure we lost the game
-        """
-        response = skill.test_intent('MINIGAMES__GUESS_NUMBER', number=[5])
-        self.assertEqual(response.text.key, 'HELLOAPP_NUMBER_WRONG_MESSAGE')
-
-    def test_fail_number(self):
-        """ Supply a non-numerical value and ensure the implementation returns the error
-        """
-        response = skill.test_intent('MINIGAMES__GUESS_NUMBER', number=['not-a-number'])
-        self.assertEqual(response.text.key, 'HELLOAPP_NO_NUMBER_MESSAGE')
