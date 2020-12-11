@@ -1,8 +1,6 @@
-import random
-import json
 import requests
 
-from skill_sdk import skill, Response, tell, Card, ask
+from skill_sdk import skill, Response, tell, ask
 from skill_sdk.l10n import _
 
 
