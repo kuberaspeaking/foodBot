@@ -37,10 +37,10 @@ def handler(meal_type: str)-> Response:
 
         :return:        Response
     """
-    if (meal_type.lower() == "vegetarian"):
+    if (meal_type.lower() == "vegetarisch"):
         msg = _("ORDER_FOOD_VEG")
 
-    if (meal_type.lower() == "fleischgerichte"):
+    if (meal_type.lower() == "fleisch"):
         msg = _("ORDER_FOOD_FLIESCH")
 
     else:
