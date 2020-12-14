@@ -12,13 +12,19 @@ msgstr ""
 
 
 msgid "ORDER_FOOD_MEAL_OPTIONS"
-msgstr "Was möchtest du essen? Vegetarisch oder Fleischgerichte?"
+msgstr "Was möchtest du essen? sagen sie bitte eins für {option1}, zwei für {option2} oder drei für {option3}"
 
-msgid "ORDER_FOOD_VEG"
-msgstr "Ich habe diese linsen suppe bestellt. Guten Appetit!"
+msgid "ORDER_FOOD_REQUEST_ERROR"
+msgstr "Es tut mir leid. {err}"
 
-msgid "ORDER_FOOD_FLIESCH"
-msgstr "Ich habe kebab sandwich bestellt!. Guten Appetit!"
+msgid "ORDER_FOOD_OPTION1"
+msgstr "Ich habe falafel bestellt. Guten Appetit!"
+
+msgid "ORDER_FOOD_OPTION2"
+msgstr "Ich habe Mousaka bestellt!. Guten Appetit!"
+
+msgid "ORDER_FOOD_OPTION3"
+msgstr "Ich habe sushi bestellt!. Guten Appetit!"
 
 msgid "ORDER_FOOD_RESPONSE_ERROR"
 msgstr "Ich verstehe nicht. Es tut mir leid :("

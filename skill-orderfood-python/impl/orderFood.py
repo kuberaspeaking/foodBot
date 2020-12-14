@@ -4,6 +4,13 @@ from skill_sdk import skill, Response, tell, ask
 from skill_sdk.l10n import _
 
 
+HERE_APIKEY = "KUFJZlg1QpKnIqlMlodmDXeu7nNktr2-caRXFHpxgSI"
+
+
+here_url = "https://browse.search.hereapi.com/v1/browse?apikey={}&in=circle:52.496345,13.355913;r=5000&categories=100-1000-0003&at=52.496345,13.355913&limit=3".format(HERE_APIKEY)
+
+
+
 @skill.intent_handler("TEAM_29_ORDER_FOOD")
 def handler() -> Response:
     """
@@ -12,7 +19,17 @@ def handler() -> Response:
 
     :return:        Response
     """
-    msg = _('ORDER_FOOD_MEAL_OPTIONS')
+    try:
+        response = requests.get(here_url)
+        data = response.json()
+        if(data["items"]):
+            option1 = data["items"][0]["title"]
+            option2 = data["items"][1]["title"]
+            option3 = data["items"][2]["title"]
+            msg = _('ORDER_FOOD_MEAL_OPTIONS', option1=option1, option2=option2, option3=option3)
+
+    except requests.exceptions.RequestException as err:
+        msg = _('ORDER_FOOD_REQUEST_ERROR', err=err)
 
     return ask(msg)
 
@@ -37,11 +54,14 @@ def handler(meal_type: str)-> Response:
 
         :return:        Response
     """
-    if (meal_type.lower() == "vegetarisch"):
-        msg = _("ORDER_FOOD_VEG")
+    if (meal_type.lower() in "eins"):
+        msg = _("ORDER_FOOD_OPTION1")
 
-    if (meal_type.lower() == "fleisch"):
-        msg = _("ORDER_FOOD_FLIESCH")
+    if (meal_type.lower() in "zwei"):
+        msg = _("ORDER_FOOD_OPTION2")
+
+    if (meal_type.lower() in "drei"):
+        msg = _("ORDER_FOOD_OPTION3")
 
     else:
         msg = _("ORDER_FOOD_RESPONSE_ERROR")
