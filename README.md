@@ -10,5 +10,5 @@ foodBot is a concierge powered by the Magenta voice assistant who brings you you
 - Tell FoodBot you are hungry
   - Ich habe hunger
   - Ich möchte essen bestellen
-- FoodBot asks you Vegetarisch oder Fleischgerichte?
+- FoodBot searches for the nearest restaurants and asks you to choose from 3 restaurants
 - Say your option. FoodBot orders menu of the day from your choice
