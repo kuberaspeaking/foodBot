@@ -57,10 +57,10 @@ def handler(meal_type: str)-> Response:
     if (meal_type == "eins"):
         msg = _("ORDER_FOOD_OPTION1")
 
-    if (meal_type in "2"):
+    if (meal_type == "zwei"):
         msg = _("ORDER_FOOD_OPTION2")
 
-    if (meal_type == "3"):
+    if (meal_type == "drei"):
         msg = _("ORDER_FOOD_OPTION3")
 
     else:
