@@ -54,13 +54,13 @@ def handler(meal_type: str)-> Response:
 
         :return:        Response
     """
-    if (meal_type.lower() == "eins"):
+    if (meal_type == "eins"):
         msg = _("ORDER_FOOD_OPTION1")
 
-    if (meal_type.lower() == "2"):
+    if (meal_type in "2"):
         msg = _("ORDER_FOOD_OPTION2")
 
-    if (meal_type.lower() in "3"):
+    if (meal_type == "3"):
         msg = _("ORDER_FOOD_OPTION3")
 
     else:
